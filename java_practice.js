@@ -72,7 +72,8 @@ the - 1 will give the last letter of the last name which is "d"   */
 var randomName = "covid";
 var lastLetterofrandomName = randomName[randomName.length - 1];
 console.log(lastLetterofrandomName)
-
+NamedNodeMap,,,,nnnnnn
+kkkllnnnnnn 
 
 
 
