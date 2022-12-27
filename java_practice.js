@@ -72,11 +72,31 @@ the - 1 will give the last letter of the last name which is "d"   */
 var randomName = "covid";
 var lastLetterofrandomName = randomName[randomName.length - 1];
 console.log(lastLetterofrandomName)
-NamedNodeMap,,,,nnnnnn
-kkkllnnnnnn 
 
+/*ARRAY Arrays allows you to several pieces of data in one place. Arrays starts with a bracket and
+ends with a bracket to show the beginning and ending of the array []*/
+var myArray = ["peace", "unity", 97];
 
+/*  Array: this is when an array is inside another another array, it is called a nested array */
+var nestedArray = [["my name, 35"], ["school is good, 45"]]
+/* Access array data with index */
+var myArray = [18, 43, 88];
+myArray[1] = 63; /* this means that 43 in the previous has changed to 63*/
 
- 
+/* Access Multi-Dimensional Arrays with Indexes 
+You can also use bracket notation to select an element in a multi-dimensional or array of arrays.*/
+var myArray = [[1,2,3], [4,5,6], [7,8,9],[10,11,12], 13,14];
+var myData = myArray[2][1];
+console.log(myData);
+/* [2] in the above example shows that the 8 is inside the third array and the [1] indicates that 8 is the second number inside the third array.*/
 
-
+/* Manipulate Arrays with Push ()
+You can append data to the end of an array with the push function. */
+var myArray = [["peace", 20], ["joy", 39]];
+myArray.push(["Happy", 50]);
+console.log(myArray);
+/*Manipulate Arrays with pop ()
+We can remove from element in the array with the pop function*/
+var myArray = [1,2,3];
+var removedFromMyArray = myArray.pop();
+console.log(myArray);
