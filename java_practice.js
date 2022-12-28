@@ -95,8 +95,20 @@ You can append data to the end of an array with the push function. */
 var myArray = [["peace", 20], ["joy", 39]];
 myArray.push(["Happy", 50]);
 console.log(myArray);
-/*Manipulate Arrays with pop ()
+/* Manipulate Arrays with pop ()
 We can remove from element in the array with the pop function*/
 var myArray = [1,2,3];
 var removedFromMyArray = myArray.pop();
 console.log(myArray);
+
+/* Manipulate array with shift(), the shift functio removes the first element of an array*/
+var myArray = [["Lucas, 55"], ["Fat, 13"]];
+var removedFromMyArray = myArray.shift();
+console.log(myArray);
+
+/* Manipulat array with unshift(), the unshift function adds an element to the beggining of the array*/ 
+var myArray = [["beans"],["rice"],["potatoes"]]
+myArray.shift(), //myArray now equals  [["rice"] ["potatoes"]]
+myArray.unsft(["yam"]);
+console.log(myArray);
+
