@@ -169,3 +169,32 @@ function fun2() {
 }
 fun1();
 fun2();
+
+/*Local Scope and Functions. variables which are declared within a function aswell 
+as in the parameters of the function has local scope. that means they are only visible 
+from within the function */ 
+function myLocalScope() {
+    var myVar = 5; // this variable is declared inside a function, so the variable myVar is only visible inside this function.
+    console.log(myVar);
+}
+
+/*Global vs Local Scope and Function. it is possibke to have both local and global variable 
+with the same name. when you do this, the local variable takes precidence over the Global variable. */
+var outerWear = "T-Shirt";
+
+function myOutfit() {
+    return outerWear; //this function calss myOutfit that will return oyterWear.
+ 
+}
+console.log(myOutfit()); //HERE it prints T-Shirt becuase the global variable is defined. 
+
+
+var outerWear = "T-Shirt";
+
+function myOutfit() {
+    var outerWear = "sweater"
+    return outerWear; //this function calss myOutfit that will return oyterWear.
+ 
+}
+console.log(myOutfit()); // here it prints 'sweater'  instead of "T-Shirt" because the local var takes precedence.  
+console.log(outerWear); // however, here it prints "T-Shirt" because we console.log the global var which is T-shirt. 
