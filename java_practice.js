@@ -109,6 +109,63 @@ console.log(myArray);
 /* Manipulat array with unshift(), the unshift function adds an element to the beggining of the array*/ 
 var myArray = [["beans"],["rice"],["potatoes"]]
 myArray.shift(), //myArray now equals  [["rice"] ["potatoes"]]
-myArray.unsft(["yam"]);
+myArray.unshift(["yam"]);
 console.log(myArray);
 
+
+
+/* FUNCTIONS: functions allows us to create reusable code in JS 
+ we call "function", then the function name, then  the parenthesis (),
+ note: we can pass something into the parenthesis (), then we have the corlly bracket { console }, 
+ and everything inside the {} appears every time the function is called. */
+ 
+ function reusableFunction() {
+    console.log("Hello friends");
+ }
+/*now call the function and remember the parenthesis (),  */
+ reusableFunction();
+ 
+  /* passing values to Functions with Arguements.  parameters are variables that acts
+as placeholders to values that are to be input to a function when it is called. 
+when the function is called we have to input/pass data into the function*/
+function ourFunctionWithArgs(a, b) {
+    console.log(a - b);
+}  // note that a and b can be anything
+ourFunctionWithArgs (10, 5); //outputs 5
+
+function myFunctionWithArgs (x, y) {
+    console.log (x + y)
+}
+myFunctionWithArgs (18, 6);
+ 
+/* Global scope and Functions. scope refers to the visibility of variables. 
+variables that are defined outside the function block are refers to GLOBAL SCOPE.
+global scope means it can be seen everywhere in your JS code  */
+
+
+var myGlobal = 10; /* since the var is set outside the function block, it can be seen everywhere even inside the function block. it appears insdie fun2*/
+
+function fun1() {
+    oopsGlobal = 5; /* IT IS POSSIBLE TO SET A VARIABLE WITHOUT USING THE var. nomally if you use a var keyward here with the variable name, 
+    this variable  oopsGlobal = 5 will be scoped to only this particular function. however since the var keyward was not added, this variable become global automatically.
+    meaning that you can access it anywhere in the program, that is why we can still use it inside fun2 */
+}
+
+function fun2() {
+    var output = "";
+    if (typeof myGlobal != "undefined") {
+        output += "myGlobal: " + myGlobal;
+    } /* this if statement above is checking if the type of myGlobal does not equal != 'undefined', 
+    so it will not equal undefined if it has been defined and the program knows about the variable.
+    since myGlobal is in global scope outside the function, it does not equal undefined but equals 10 
+    because the program knows about the varaibale.
+    so the    will run what is in this if statement while we just add what is in the output "myglobal:"  
+    and the value of myGlobal which is 10. so it prints out myGlobal: 10. */
+    
+    if (typeof oopsGlobal != "undefined") {
+        output += " oopsGlobal: " + oopsGlobal;
+    }
+    console.log(output);
+}
+fun1();
+fun2();
