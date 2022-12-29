@@ -242,20 +242,58 @@ functions can have return statement but they dont have to. if you dont specify t
  console.log(processed);
 
 
- /* Stand in Line. in computer science a Q []is where items are kept in orders.
+ /* Stand in Line. in computer science a Queue is where items are kept in order, new items are added and older items are removed from the front of the queue.
  the purpose of this 'nextInLine function' here is that you can add an item to the arr passed in
  and is going to return the first item of the list. */
 function nextInLine(arr, item) {
 
-    arr.push(item); // we but the arr that was passed above and them we push an item into the var testArr.  here we add an item to the list
-    return arr.shift(); // shift removes the first item of the list and returns the first item. in this case it will return 1 which is the first item. 
+    arr.push(item); // we but the arr that was passed above and them we push an item into the var testArr.  the push () method add an item to the list
+    return arr.shift(); // shift () removes the first element of an array from the list and also returns the first elemrnt removed. in this case it will return 1 which is the first item/element. 
 }
 
 var testArr = [1,2,3,4,5]; /* for instance when we add an item to the list in this array, it should come after "5" which is the last on the list
 and then should return the first item of the list in this case its "1" */
 
-
+//Display code
 console.log("Before: " + JSON.stringify(testArr)); /* this shows what the array looks like b4 hand. the JSCON.stringify is just a way to change an array 
 into a string that can easily be as a string. */
 console.log(nextInLine(testArr, 6));
-console.log("After: " + JSON.stringify(testArr)); //this shows what the array looks like  afterwards. 
+console.log("After: " + JSON.stringify(testArr)); //this shows what the array looks like  afterwards.
+
+
+function nextInLine (arr, item) {
+
+    arr.push(item);
+    return arr.shift();
+}
+var sampleArr = [1,2,3,6,8,9];
+
+console.log("Before: " + JSON.stringify(sampleArr));
+console.log(nextInLine(sampleArr, 7));
+console.log("After: " + JSON.stringify(sampleArr));
+
+/* Boolen values. Booleans are a data type in JS . there are only two values True or False. usually when TRUE is on FALSE is off vise versa.*/
+function welcomeToBooleans() {
+    return false; //it can either return true or false.
+}
+
+/* Use Conditional  Logic with if Statements. if statement is used to make. decisions in code.
+the keyward if tells JS to execute the code in the {} under certain conditions defined in the ()
+if the variable inside the () is true it will return the first the first statement in the function: "Yes, it's true",
+and if its not true it will return the second statement of the function: "No, it's false"  
+note: the whole funcyion takes in a variable: (isItTrue). */
+function myTrueOrFalse(isItTrue) {
+    if (isItTrue) {
+        return "Yes, it's true";
+    }
+    return "No, it's false";
+}
+console.log(myTrueOrFalse(true)); //since we passed in true, it prints Yes, it's true".
+
+function ourTrueOrFalse(wasThatTrue) {
+    if (wasThatTrue) {
+        return "Yes, that was true";
+    }
+    return "No, that was false";
+}
+console.log(ourTrueOrFalse(false)); //since we passed in false, it prints "No, that was false".
