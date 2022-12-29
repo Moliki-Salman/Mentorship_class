@@ -331,4 +331,45 @@ console.log(ourTrueOrFalse(false)); //since we passed in false, it prints "No, t
     return "Not Equal"
  }
 
- console.log(testEqual('6')); // its prints not equal becuase its '6' is differnt from 6 when ==== interpretes. 
+ console.log(testEqual('6')); // its prints not equal becuase its '6' is differnt from 6 when === interpretes. 
+
+ /* Practice Comparising Differnt Values */
+ function compareEquality(a, b) {
+    if (a == b) {
+        return "Equal";
+    }
+    return "Not Equal";
+ }
+
+ console.log(compareEquality(10, '10')) //its returns "Equal" because the == converts the data type fron string to number.
+
+ function newCompareEqual(x, y) {
+    if (x === y) {
+        return "Equal";
+    }
+    return "Not Equal";
+ } 
+ console.log(newCompareEqual(10, '10')) //its returns " Not Equal" because the === does not converts the data type fron string to number.
+
+ /* Comparison with Inequality Operator != 
+ we are checking if 10 is not equal 80 */
+ function testNotEqual(val) {
+    if (val != 80) {
+        return "Not Equal";
+    }
+    return "Equal";
+ }
+
+ console.log(testNotEqual(10)); // its prints out "Not Equal" because the value passed which is 10  is not equal 80. 
+
+ /* Comparison with the Strict Inequality Operator 
+ we are checking if 6 is not equal 3 but with the strict not equal operatpr.*/
+function testStrictNotEqual(val) {
+
+    if (val !== 6) {
+        
+        return "Not Equal";
+    }
+    return "Equal";
+}
+console.log(testStrictNotEqual(3))
