@@ -242,3 +242,20 @@ functions can have return statement but they dont have to. if you dont specify t
  console.log(processed);
 
 
+ /* Stand in Line. in computer science a Q []is where items are kept in orders.
+ the purpose of this 'nextInLine function' here is that you can add an item to the arr passed in
+ and is going to return the first item of the list. */
+function nextInLine(arr, item) {
+
+    arr.push(item); // we but the arr that was passed above and them we push an item into the var testArr.  here we add an item to the list
+    return arr.shift(); // shift removes the first item of the list and returns the first item. in this case it will return 1 which is the first item. 
+}
+
+var testArr = [1,2,3,4,5]; /* for instance when we add an item to the list in this array, it should come after "5" which is the last on the list
+and then should return the first item of the list in this case its "1" */
+
+
+console.log("Before: " + JSON.stringify(testArr)); /* this shows what the array looks like b4 hand. the JSCON.stringify is just a way to change an array 
+into a string that can easily be as a string. */
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr)); //this shows what the array looks like  afterwards. 
