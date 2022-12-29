@@ -297,3 +297,38 @@ function ourTrueOrFalse(wasThatTrue) {
     return "No, that was false";
 }
 console.log(ourTrueOrFalse(false)); //since we passed in false, it prints "No, that was false".
+
+/* Comparison with the Equality Operator == */
+ function testEqual (a) {
+    if (a == 12) {   //we want to check if a equals 12. note == is the equal sign, while = is the assignment operator. 
+        return "Equal";
+    }
+    return "Not Equal";
+ }
+
+ console.log(testEqual(10)); //the tesrEqual function will test if the number we are passing is equal to 12.
+
+ function newVar (x) {
+    if (x == 20) {
+        return 20;
+    }
+    return 30
+ }
+ console.log(newVar(23));
+
+ /*  Comparison with  the Strict Equality Operator === 
+ 
+ the differnce btw == and === is that == converts the datas into a common type,
+ whille this === does not do the type conversion. 
+ 3 === 3 this will evaluate to true
+ 3 === '3' while this will evaluate to false. while if it were 3 ==3 and 3 == '3'
+  will be true because the '3' will be converted to a number. 
+ */
+ function testStrict(val) {
+    if (val === 6) {
+        return "Equal";
+    }
+    return "Not Equal"
+ }
+
+ console.log(testEqual('6')); // its prints not equal becuase its '6' is differnt from 6 when ==== interpretes. 
