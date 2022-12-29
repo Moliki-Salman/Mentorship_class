@@ -178,7 +178,7 @@ function myLocalScope() {
     console.log(myVar);
 }
 
-/*Global vs Local Scope and Function. it is possibke to have both local and global variable 
+/*Global vs Local Scope and Function. it is possible to have both local and global variable 
 with the same name. when you do this, the local variable takes precidence over the Global variable. */
 var outerWear = "T-Shirt";
 
@@ -193,8 +193,52 @@ var outerWear = "T-Shirt";
 
 function myOutfit() {
     var outerWear = "sweater"
-    return outerWear; //this function calss myOutfit that will return oyterWear.
+    return outerWear; //this function calss myOutfit that will return outerWear.
  
 }
 console.log(myOutfit()); // here it prints 'sweater'  instead of "T-Shirt" because the local var takes precedence.  
 console.log(outerWear); // however, here it prints "T-Shirt" because we console.log the global var which is T-shirt. 
+
+/* Return a value from a Function with return statement. Note: we are passing a number into the function minuSeven, which is the (num) */ 
+function minusSeven(num) {
+    return num - 7; //its going to return whatever is after the return keyword whic is - 7
+}
+console.log(minusSeven(10)); // so it prints the the value of minusSeven "-7" then 10 -7 = 3. it prints 3. 
+
+function  timesFive(num) {
+    return num * 5;
+}
+console.log(timesFive(6));
+
+/* Understanding Undefined Value Returned from a Function 
+functions can have return statement but they dont have to. if you dont specify the return value then the return value is undefined */ 
+ var sum = 0;
+ function addFour() {
+    sum = sum + 3;
+ } //this function adds three to the sum variable which is a global variable becuase its defined b4 the function.  It does not return anything bcos no return value is specified.
+
+ function addSix() {
+    sum += 5;
+ } //its not going to return anything bcos no return value was defined.
+
+ /* Assignment with a Returned value. */
+ var changed = 0; // this is initializing the variable process. 
+
+ function change(num) {
+    return (num + 5) / 3;
+ } //we have the function change and we pass in a num and it will return the value of the maticmatical expression
+
+ changed = change(10); /*here we call the function change and pass in 10 as the num, 
+ the value that is returned from the above expression will be stored in the variable changed */
+ console.log(changed);
+
+
+ var processed = 0;
+
+ function processArg(num) {
+    return (num - 5) / 4;
+ }
+ processed = processArg(8);
+ console.log(processed);
+
+
