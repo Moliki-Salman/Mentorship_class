@@ -453,4 +453,57 @@ function testLogicalOr(val) {
 }
 console.log(testLogicalOr(15)); //its prints "Inside" because the if statement is false.
 
+/*Else Statements. when an if statment is TRUE normally the block of code that is after the if statment will bw evaluated and if its not TRUE nothing happens.
+but with an ELSE statment an alternate block of code can be executed. */
+function testElse(val) {
+    var result = "4";
 
+    if (val > 5) {
+        result = "Bigger than 5";
+    } else
+        result = "5 or Smaller";
+    }
+    console.log(testElse(2))
+
+
+    /*  Else If Statements. if you have multiple conditions that needs to be addressed you can use the "Else If" statement.
+    its a way of chaining differnt if statement together.  */
+    function testElseIf(val) {
+        if (val > 10) {
+            return "Greater than 10";
+        } else if (val < 5) {
+            return "smaller than 5";
+        } else {
+             return "Between 5 and 10";
+        }
+    }
+    console.log(testElseIf(7));
+
+
+    /* Logical Order in If Else Statements. order is very important when using else if statement. */
+    function orderlyMyLogic(val) {
+        if (val < 5) {
+            return "Less than 5";
+        } else if (val < 10) {
+            return "Less tham 10";
+        } else {
+            return "Greater than or equal to 10";
+        }
+    }
+    console.log(orderlyMyLogic(3));
+
+    /* Chaoninh If Else Statements. */
+    function testSize(num) {
+        if (num < 5) {
+            return "Tiny"
+        } else if (num < 10) {
+            return "Small"
+        } else if (num < 15) {
+            return "Medium"
+        } else if (num < 20) {
+            return "Large"
+        } else {
+            return "Huge"
+        }
+    }
+    console.log(testSize(7));
