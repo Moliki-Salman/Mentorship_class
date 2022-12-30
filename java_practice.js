@@ -372,4 +372,85 @@ function testStrictNotEqual(val) {
     }
     return "Equal";
 }
-console.log(testStrictNotEqual(3))
+console.log(testStrictNotEqual(3));
+
+/* Comparison with the Logical and Operator. */
+function testGreaterThan(val) {
+    if(val > 100) {
+        return "Over 100";
+    } //checking if value is gereater than 100
+
+    if (val > 10) {
+        return "Over 10";
+    } //checking if value is greater than 10
+
+    return "10 or Under";
+
+}
+console.log(testGreaterThan(10)); //its prints "10 or Under" becuase the value passed is 10 and not greater than 10 or 100. 
+
+/* Comparison with the Greater Than Or Equal To Operator*/
+function testGreaterOrEqual(val) {
+    if (val >= 20) {
+        return "20 or Over";
+    }
+
+    if (val >= 10) {
+        return "10 or Over";
+    }
+
+    return "Less than 10";
+}
+console.log(testGreaterOrEqual(10)); // its prints "10 or Over" because the value passed is 10 . 
+
+/*  Comparison with the Less Than Operator. */
+function testLessThan(val) {
+    if (val < 25) {
+        return "Under 25"
+    }
+
+    if (val < 55) {
+        return "Under 55";
+    }
+
+    return "55 or Over";
+}
+console.log(testLessThan(10)); // its prints "Under 25" because the value 10 that was passed is less than 25 and also the first if statement must be checked and if there is result it authomatically ignore other if statement stated. 
+
+/* Comparison with the Less Than or Equal To Operator */
+function testLessOrEqual(val) {
+    if (val <= 12) {
+        return "Smaller Than or Equal to 12"
+    }
+
+    if (val <= 24) {
+        return "Smaller Than or Equal to 24"
+    }
+
+    return "More Than 24";
+}
+console.log(testLessOrEqual(10)); // it returns "Smaller Than or Equal to 12"
+
+/* Comparisons with the Logical And Operator "&&"
+the example shows a nested/two if statment to be interpreted using the "And &&"  operator */
+function testLogicalAnd(val) {
+
+    if (val <= 50 && val >= 25) { //both val <= 50 and val >= 25 have to be TRUE to get "Yes"
+        return "Yes";
+        }
+        return "No";
+    }
+console.log(testLogicalAnd(30)); //its prints Yes because boths if conditions are true. 
+
+/* Comparison with the Logical Or Operator "||" */
+function testLogicalOr(val) {
+
+    if (val < 10 || val > 20) {
+        return "Outside";
+    }
+
+    return "Inside"
+}
+console.log(testLogicalOr(15)); //its prints "Inside" because the if statement is false.
+
+
