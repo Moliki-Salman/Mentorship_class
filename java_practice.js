@@ -506,4 +506,27 @@ function testElse(val) {
             return "Huge"
         }
     }
-    console.log(testSize(7));
+    console.log(testSize(19));
+
+   /* Golf Code. in the game of golf each hole has a "par" which mweans the average number of strokes u are supposed to use to get the ball into the hole.
+   Note: "var names" is an ARRAY and every element of an array is reperesent with number dtartting from 0. we can represents the names of the arrays with the number they represents.
+   we are going to write a function that will pass in value for par and strokes */
+   var names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"]
+   function golfScore(par, strokes) {
+    if (strokes == 1) {
+        return names[0]
+    } else if (strokes <= par -2) {
+        return names[1]
+    } else if (strokes == - 1) {
+        return names[2]
+    } else if (strokes == par) {
+        return names[3]
+    } else if (strokes == par + 1) {
+        return names[4]
+    } else if (strokes == par + 2) {
+        return names[5]
+    } else if (strokes >= par + 3) {
+        return names[6]
+    }
+   }
+   console.log(golfScore(5, 7));
