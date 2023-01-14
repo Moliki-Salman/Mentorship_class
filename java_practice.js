@@ -957,10 +957,41 @@ var ourArray = [];
 for (var i = 10; i > 0; i -= 2) { // -= 2 means decreamenting the array by 2. 
     ourArray.push(i);
 }
+
 console.log(ourArray);
 
 var myArray = [];
 for (var p = 20; p > 2;  p -= 4) {
     myArray.push(p);
 }
+
 console.log(myArray)
+
+/* Iterate Through an Array with a For Loop */
+var ourArr = [9, 10, 11, 12];
+var ourTotal = 0;
+
+for (var i = 0; i < ourArr.length; i++) {
+    ourTotal += ourArr[i]; //we are going to add to the ourTotal (which is initially = 0) with what is inside the ourArr elements, which means 0+ element[0] whic is 9, 0 + elemnt[1] which is 10, till it adds all the elements. it stops adding at the length of the array. 
+}
+
+console.log(ourTotal);
+
+
+var myArr = [3, 6,9];
+var myTotal = 0;
+
+for (var p = 0; p < myArr.length; p++) {
+    myTotal += myArr[p];
+}
+
+console.log(myTotal);
+
+var  newArr = [12, 10, 13];
+var newTotal = 0;
+
+for (var y = 0; y < newArr.length; y++) {
+    newTotal += newArr[y];
+}
+
+console.log(newTotal);
