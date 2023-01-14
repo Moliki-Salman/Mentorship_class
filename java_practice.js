@@ -810,3 +810,36 @@ function phoneticLookup(val) {
     return result;
 }
 console.log(phoneticLookup("foxtrot"));
+
+/* Testing Objects for Properties */
+var myObj = {
+    gift: "pony",
+    pet: "Kitten",
+    bed: "sleigh"
+};
+function checkObj(checkProp) {
+    if (myObj.hasOwnProperty(checkProp)) {
+        return myObj[checkProp];    
+    } else {
+        return "Not Found"
+    }
+}
+console.log(checkObj("pet"));
+
+var newObj = {
+    food: "rice",
+    fruit: "apple",
+    drink: "water"
+};
+
+function checkObjt(checkProp) {
+    if (newObj.hasOwnProperty(checkProp)) {
+        return newObj [checkProp];
+    } else {
+        return "ZERO"
+    }
+};
+console.log(checkObjt("fruit"));
+
+
+
