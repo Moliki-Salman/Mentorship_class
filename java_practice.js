@@ -917,3 +917,16 @@ while(x < 5) {
     x++;
 }
 console.log(myArray);
+
+/* Iterate with For Loops. the for loop contains first: initialization eg: var x = 0; second: condition e.g x < 5; third: is x++, x++ means increment x by 1 */
+var ourArray = [];
+for (var x = 0; x < 5; x ++) {
+    ourArray.push(x);
+}
+
+var newArray = [];
+
+for (var i = 1; i < 8; i++) {
+    newArray.push(i);
+}
+console.log(newArray);
