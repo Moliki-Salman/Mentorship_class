@@ -930,3 +930,24 @@ for (var i = 1; i < 8; i++) {
     newArray.push(i);
 }
 console.log(newArray);
+
+
+/* Iterate odd number into a for loop */
+var ourArray = [];
+
+for (var i = 0; i < 10; i += 2) { // i += 2 : this means u are incrementing it by 2
+    ourArray.push(i);
+}
+console.log(ourArray);
+
+var denArray = [];
+for (var y = 5; y < 30; y += 5) {
+    denArray.push(y);
+}
+console.log(denArray);
+
+var freshArray = [];
+for (p = 2; p < 18; p += 3) {
+    freshArray.push(p);
+}
+console.log(freshArray);
