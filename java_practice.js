@@ -905,3 +905,15 @@ var myplants = [
 
 var secondTree = myplants[0].list[2];
 console.log(secondTree);
+
+/* Iterate with While Loops. loops allow you to run the same code multiple times.
+While Loop specify if a condition is true, it function until the condition is no longer true. 
+push the 0-4 on to the array: while(x < 5) */
+
+var myArray = [];
+var x = 0;
+while(x < 5) {
+    myArray.push(x);
+    x++;
+}
+console.log(myArray);
