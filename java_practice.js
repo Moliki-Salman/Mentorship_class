@@ -711,7 +711,39 @@ var ourDog = {
 var myDog = {
     "name": "Dammy",
     "school": "Freie Uni",
-}
+    "friends": [],
+};
 
-/* There are two ways to access property in an object
+/* Accessing objects with Dot Notation: There are two ways to access property or find the value of a property in an object
 */
+var testObj = {
+    "hat": "ballcap",
+    "shirt": "jersey",
+    "shoes": "cleats"
+};
+
+var hatValue = testObj.hat;
+var shirtValue = testObj.shoes;
+
+/* Accessing objects with  Bracket Notation: you can use bracket notation anything but it is required that the property has space in the name e.g "an entree" or "my side".
+ */
+
+var testObj = {
+    "an entree": "hamburger",
+    "my side": "veggies",
+    "the drink": "water",
+};
+
+var entreeValue = testObj["an entree"];
+var drinkValue = testObj;['the drink'];
+
+/* Accessing object Properties with Variables. Bracket notattion is also used to look at object properties with variables
+ */
+var testObjt = {
+    12: "Namath",
+    16: "Montana",
+    19: "Unities",
+};
+
+var playerNumber = 16;
+var player = testObj [playerNumber]; //player is set to the string "Montana"
