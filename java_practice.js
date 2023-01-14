@@ -795,3 +795,18 @@ var ourDog = {
 
 delete ourDog.tails; //The keyword "delete" is used . this will delete the property "tails" from the list
 
+/* Using Objects for Lockups */
+
+function phoneticLookup(val) {
+    var result = "";
+
+    var lockup = {
+        "alpa": "Adams",
+        "bravo": "Boston",
+        "foxtrot": "frank"
+    };
+    result =lockup[val];
+
+    return result;
+}
+console.log(phoneticLookup("foxtrot"));
