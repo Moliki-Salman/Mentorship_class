@@ -841,5 +841,26 @@ function checkObjt(checkProp) {
 };
 console.log(checkObjt("fruit"));
 
+/* Manipulating Complex objects. JS object is a way to store flexible data  */
+var myMusic = [ //this is an array [] called MY myMusic
+    {
+        "artist": "Billy Joel",
+        "title": "Piano Man",
+        "release_year": "1978",
+        "formats": [
+            "CD",
+            "LP",
+            "9T",
+        ],
+        "gold": true
+    },
 
-
+    {
+        "artist": "DJ",
+        "title": "song",
+        "release_year": "1960",
+        "format": [
+            "Istagram video"
+        ],
+    }
+];
