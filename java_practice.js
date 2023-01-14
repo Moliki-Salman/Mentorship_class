@@ -881,3 +881,27 @@ var myStorage = {
 var trunkBoxContents = myStorage.car.outside["trunk box"]; //I used the [] for "trunk box" because there is space in betwn thw words od trunk box. 
 
 console.log(trunkBoxContents);
+
+/* Accessing Nested Arrays. */
+
+var myplants = [
+    {
+        type: "flowers",
+        list: [
+            "rose",
+            "tulip",
+            "dandelion"
+        ]
+    },
+    {
+        type: "tress",
+        list: [
+            "fir",
+            "pine",
+            "birch",
+        ]
+    }
+];
+
+var secondTree = myplants[0].list[2];
+console.log(secondTree);
