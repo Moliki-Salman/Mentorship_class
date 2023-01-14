@@ -935,7 +935,7 @@ console.log(newArray);
 /* Iterate odd number into a for loop */
 var ourArray = [];
 
-for (var i = 0; i < 10; i += 2) { // i += 2 : this means u are incrementing it by 2
+for (var i = 0; i < 10; i += 2) { // i += 2 : this means u are incrementing, going up it by 2
     ourArray.push(i);
 }
 console.log(ourArray);
@@ -947,7 +947,20 @@ for (var y = 5; y < 30; y += 5) {
 console.log(denArray);
 
 var freshArray = [];
-for (p = 2; p < 18; p += 3) {
+for ( var p = 2; p < 18; p += 3) {
     freshArray.push(p);
 }
 console.log(freshArray);
+
+/* Count backward with a loop */
+var ourArray = [];
+for (var i = 10; i > 0; i -= 2) { // -= 2 means decreamenting the array by 2. 
+    ourArray.push(i);
+}
+console.log(ourArray);
+
+var myArray = [];
+for (var p = 20; p > 2;  p -= 4) {
+    myArray.push(p);
+}
+console.log(myArray)
