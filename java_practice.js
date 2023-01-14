@@ -530,3 +530,171 @@ function testElse(val) {
     }
    }
    console.log(golfScore(5, 7));
+
+   /* Switch Statements Instead of using a chained else if statement, you can use a switch statement.
+   A switch statement test a value and can have many key statement which defines various posible values..
+   Write a switch statment which tests val and sets answer for the following conditions:
+   1 - "alpha"
+   2 - "beta"
+   3 - "gamma"
+   4 - "delta" 
+   that is if we pass in 1, the answer should be "alpha" and so on. */
+   function caseInSwitch(val) {
+    var answer = "";
+    switch(val) { //we are going to compare the val with the different cases statement.
+        case 1: //this means if val equals 1 (using the strict equality operator making sure the data type are the same) we set answers to "alpha"
+            answer = "alpha";
+            break; //break means at the end of that switched statement. if you dont have a break, it will run through the next case statemnet automathically.
+        case 2:
+            answer = "beta";
+            break;
+        case 3:
+            answer = "gamma"
+        case 4:
+            answer = "delta"
+            break;
+    }
+
+    return answer;
+   }
+
+   console.log(caseInSwitch(1));
+
+   /* Default Option Switch Statement. Default option is similer to "Else" */
+   function switchOfStuff(val) {
+    var answer = "";
+    switch (val) {
+        case "a":
+            answer = "bird"
+            break;
+        case "b":
+            answer = "apple"
+            break;
+        case "c":
+            answer = "cat";
+            break;
+        default:
+            answer = "stuff" // this means if any other value is passed that is not in the case option, the anwer will print "stuff"
+    }
+        return answer;
+   }
+   console.log(switchOfStuff("2")); //note if we pass in a value that is not in the option, may be 2, the answe will be "" which is an empty string becuase it returns an empty string. 
+
+   /*Multiple Identical Option in Switch statement. some times you want to switch statement where multiple inputs give the same output*/
+   function sequentialSizes(val) {
+    var answer = "";
+    switch(val) {
+        case 1:
+        case 2:
+        case 3:
+            answer = "Low";
+            break;
+        case 4:
+        case 5:
+        case 6:
+            answer = "Mid";
+            break;
+        case 7:
+        case 8:
+        case 9:
+            answer = "High";
+            break;
+    }
+
+    return answer;
+
+   }
+   console.log(sequentialSizes(1));
+
+   /* Replacing If Else chains with Switch */
+   function chainToswitch(val) {
+    var answer = "";
+    switch(val){
+        case "bob":
+            answer = "Marley";
+            break;
+        case 42:
+            answer = "The Answer"; 
+            break;
+        case 1:
+            answer = "There is no no 1";
+            break;
+        case 99:
+            answer = "Missed me by this much!";
+            break;
+        case 7:
+            answer = "Ate Nine";
+            break;
+
+    }
+    return answer;
+
+   }
+   console.log(chainToswitch(99));
+
+   /* Returning Boolen Value from Functions. here is a little trick if you want a function to return a TRUE or FALSE value
+   instead of writing it like this: */
+   /*function isLess(a, b) {
+
+    if (a < b) {
+        return true;
+    } else {
+        return false;
+    }
+   }
+   console.log(isLess(10, 15));/*You can shortin it like this example*/ 
+    function isLess(a, b) {
+        return a < b;
+    }
+    console.log(isLess(10, 15));
+
+    /* Returning Early Pattern from Functions. you can return early from a function with the return statement. 
+    you can leave the function anytime with the return statement.
+    we are writing a function that sets if a or b is less than 0, its going to immediately exit the function and say "undefined" */
+    function abTest(a,b) {
+        if (a < 0 || b < 0) {
+            return undefined;
+        }
+
+        return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2))
+    }
+    console.log(abTest(-2,2));
+
+    /* Counting Cards. we are creating a black jack card counting function
+    the card counting function works like this: we you see a low card, the card goes up, and when its a high card, the card goes down, and when its a middle value card, the card stays the same.
+    and when a card is positive a player should bet high and when a card is zero or negative the player should bet low.
+    use a switch statement to figure out what card is passed in and what to do about it
+    so when the cc(card) function is called, it will determine the number of var count and we also going to dtermine the return value, may be a player should hold or bet
+    so when the cc(card) function is called, its going to change the count value */
+    var count = 0;
+
+    function cc(card) {
+        switch(card) {
+            case 2: // if the case is 2,3,4,5,6 we are going to increase the count value with count++
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+                count++;
+                break;
+            case 10: //we are decreasing the count value when we have 10, "J", "Q"
+            case "J":
+            case "Q":
+            case "K":
+            case "A":
+                count --;
+                break;
+        }
+
+        var holdbet = 'Hold'
+        if (count > 0) {
+            holdbet = 'Bet'
+        }
+
+        return "" //we are going to return the count, we are also going to determine whether to bet
+    }
+
+    cc(2); cc(3); cc(7); cc('k'); cc('A');
+    console.log(cc(4));
+
+    
