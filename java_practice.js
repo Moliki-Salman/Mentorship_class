@@ -697,4 +697,21 @@ function testElse(val) {
     cc(2); cc(3); cc(7); cc('k'); cc('A');
     console.log(cc(4));
 
-    
+    /* OBJECTS: You use properties to access data in objects. Objects are usually defined with {}, 
+    everything before the semi colon: is called the property e.g "name", "leg" are properties. 
+    while everything after the colons are values e.g 4, "Camper" etc. 
+    note, this showa that objects properties can be different data types. they can be strings, numbers, arrays etc. */
+var ourDog = {
+    "name": 4,
+    "legs": "Camper",
+    "tails": 1,
+    "friends": ["everything"]
+}
+
+var myDog = {
+    "name": "Dammy",
+    "school": "Freie Uni",
+}
+
+/* There are two ways to access property in an object
+*/
