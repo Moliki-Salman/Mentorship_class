@@ -782,3 +782,16 @@ var myDog = {
     "friends": ["everything"]
 };
 myDog['newList'] = "added"
+
+/* Delete Properties From an  Object*/
+
+var ourDog = {
+
+    "name": 4,
+    "legs": "Camper",
+    "tails": 1,
+    "friends": ["everything"]
+};
+
+delete ourDog.tails; //The keyword "delete" is used . this will delete the property "tails" from the list
+
