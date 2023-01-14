@@ -702,6 +702,7 @@ function testElse(val) {
     while everything after the colons are values e.g 4, "Camper" etc. 
     note, this showa that objects properties can be different data types. they can be strings, numbers, arrays etc. */
 var ourDog = {
+
     "name": 4,
     "legs": "Camper",
     "tails": 1,
@@ -747,3 +748,37 @@ var testObjt = {
 
 var playerNumber = 16;
 var player = testObj [playerNumber]; //player is set to the string "Montana"
+
+/* Updating Object Porperties. we can use dot notation to update object properties */
+
+var ourDog = {
+    
+    "name": 4,
+    "legs": "Camper",
+    "tails": 1,
+    "friends": ["everything"]
+};
+
+ourDog.name = "Happy Camper"
+ourDog.friends = "friends is everything!"
+
+/* Add New Prosperties to an Object using dot notation or bracket notation*/
+
+var ourDog = {
+
+    "name": 4,
+    "legs": "Camper",
+    "tails": 1,
+    "friends": ["everything"]
+};
+
+ourDog.bark = "bow-bow"; //we have adeded this to the above list of ourDog
+
+var myDog = {
+
+    "name": 4,
+    "legs": "Camper",
+    "tails": 1,
+    "friends": ["everything"]
+};
+myDog['newList'] = "added"
