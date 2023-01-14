@@ -855,7 +855,7 @@ var myMusic = [ //this is an array [] called MY myMusic
         "gold": true
     },
 
-    {
+    { //a second obj inside the array
         "artist": "DJ",
         "title": "song",
         "release_year": "1960",
@@ -864,3 +864,20 @@ var myMusic = [ //this is an array [] called MY myMusic
         ],
     }
 ];
+
+/* Acessing Nested Objects. */
+var myStorage = {
+    "car": {
+        "inside": {
+            "glove box": "maps",
+            "pasenger seat": "crumbs"
+        },
+        "outside": {
+            "trunk box": "jack"
+        }
+    }
+};
+
+var trunkBoxContents = myStorage.car.outside["trunk box"]; //I used the [] for "trunk box" because there is space in betwn thw words od trunk box. 
+
+console.log(trunkBoxContents);
