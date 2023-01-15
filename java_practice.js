@@ -1013,3 +1013,23 @@ function multiplyAll(arr) {
  var product = multiplyAll([[1,2],[3,4],[5,6,7]]);
 
  console.log(product);
+
+ /* Iterate with DO ... WWhile Loops.while loop is differnt from DO While Loop.
+ While loop checks conditions b4 running any code. A Do while looop will always run at leaast one time before it checks condition.*/
+ var myArray = []; //While loop example
+ var i = 10;
+
+ while (i < 5) {
+    myArray.push(i);
+    i++;
+ }
+ console.log(i, myArray); // the answer here is 10 and [], because 1 is = 10, and the connditon of the while loop is faulse(i < 5), so it returns an emptty array. 
+
+ var myArray = []; // DO While loop example
+ var i = 10;
+
+  do { // here first the "do" first did the incrementation of the i++, which makes is add 10 + 1 before checking the condition of the while loop, since the condition is false, it stops and breaks out of the loop.
+    myArray.push(i);
+    i++; 
+ } while (i < 5)
+ console.log(i, myArray); // answer is i = 11, and [10]
