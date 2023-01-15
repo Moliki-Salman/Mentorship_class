@@ -1033,3 +1033,35 @@ function multiplyAll(arr) {
     i++; 
  } while (i < 5)
  console.log(i, myArray); // answer is i = 11, and [10]
+
+ /* Profile Lookup*/
+var contacts = [
+    {
+        "firstName": "Akira",
+        "LastName": "Laine",
+        "number": "000000",
+    },
+    {
+        "firstName": "Marry",
+        "LastName": "Potter",
+        "number": "111111",
+    },
+    
+    {
+        "firstName": "Sherlock",
+        "LastName": "Holmes",
+        "number": "222222",
+    }
+];
+/* we do the lockup profile function where we pass in a name and property, its going to return the value of that property. and if there are no such property, it shpuld return no such prop.*/
+function lockUpProfile(name, prop){
+    for (var i = 0; i < contacts.length; i++) {
+        if(contacts[i].firstName === name) {
+            return contacts[i][prop] || "No such property";
+        };
+    };
+    return "No such contact";
+};
+
+var data = lockUpProfile("Akira", "number");
+console.log(data);
