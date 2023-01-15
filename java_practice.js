@@ -978,7 +978,7 @@ for (var i = 0; i < ourArr.length; i++) {
 console.log(ourTotal);
 
 
-var myArr = [3, 6,9];
+var myArr = [3, 6, 9];
 var myTotal = 0;
 
 for (var p = 0; p < myArr.length; p++) {
@@ -995,3 +995,21 @@ for (var y = 0; y < newArr.length; y++) {
 }
 
 console.log(newTotal);
+
+/*  Nested for Loops. we can use the "multiply all function" ti multiply within a nested array. 
+nested for loop can access all the arr element. */
+function multiplyAll(arr) {
+    var product = 1;
+
+    for (var i=0; i < arr.length; i++) {
+        for (var j=0; j < arr[i].length; j++) {
+            product *= arr[i][j];
+        }
+    }
+
+    return product;
+}
+
+ var product = multiplyAll([[1,2],[3,4],[5,6,7]]);
+
+ console.log(product);
