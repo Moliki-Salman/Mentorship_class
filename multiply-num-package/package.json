@@ -1,0 +1,14 @@
+{
+  "name": "multiply-num-package",
+  "version": "1.0.0",
+  "description": "Test multiply-num",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "multiply"
+  ],
+  "author": "Moliki-Salman",
+  "license": "ISC"
+}
