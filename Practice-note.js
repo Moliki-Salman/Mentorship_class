@@ -13,3 +13,25 @@ function IfElseStatements(num) {
     
 }
 console.log(IfElseStatements(30));
+  
+function switchStatement(val) {
+   answer = "";
+
+    switch(val) {
+        
+        case "bob":
+            answer = "Marley";
+            break;
+        case 42:
+            answer = "The Answer";
+            break;
+        case 1:
+            answer = "There is no no 1";
+            break;
+        case 99: 
+            answer = "Missed me by this much";
+            break;
+    }
+    return answer;
+}
+console.log(switchStatement(99));
