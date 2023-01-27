@@ -85,3 +85,11 @@ function newSampleExample() {
     return Math.floor(Math.random) * 3;
 }
 console.log(newSampleExample());
+
+/* Calculating Range of a number */
+function randomRange(myMin, myMax) {
+    return Math.floor(Math.random) * (myMax - myMin) + myMin;
+}
+var myRandom = randomRange(3, 9);
+
+console.log(myRandom);
