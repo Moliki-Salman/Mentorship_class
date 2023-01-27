@@ -35,3 +35,20 @@ function switchStatement(val) {
     return answer;
 }
 console.log(switchStatement(99));
+
+/* write a function using object to pass in value and return. */
+
+function objectFunction(val) {
+    let result = "";
+    
+    let lockup = {
+        "Nigeria": "Abuja",
+        "Germany": "Berlin",
+        "Poland" : "Warsaw",
+    };
+
+    result = lockup[val];
+    
+    return result;
+};
+  console.log(objectFunction("Nigeria"))
