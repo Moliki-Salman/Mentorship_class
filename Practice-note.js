@@ -107,3 +107,24 @@ function convertToInteger(str) {
     return parseInt(str, 2)
 }
 convertToInteger("100001100");
+
+/* Ternary operator
+// condition ? statement-if-true : statement-if-false;
+you can write the below fuction also in thr Ternary style */
+function checkEqual(a,b) {
+    if(a ===b) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+function checkEqual(a,b) {
+    return a ===b ? true : false;
+}
+checkEqual(1,2);
+
+function testNum(num) {
+    return num > 5 ? "positive" : num < 2 ? "negative" : "zero"
+}
+console.log(testNum(1));
