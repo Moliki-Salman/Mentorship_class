@@ -76,3 +76,12 @@ function objectFunction(val) {
     return Math.random();
   }
 console.log(randomFunction());
+
+/* Math.floor function randsdown to the nearest whole number. */
+let sampleExample = Math.floor(Math.random) * 30;
+
+function newSampleExample() {
+    
+    return Math.floor(Math.random) * 3;
+}
+console.log(newSampleExample());
