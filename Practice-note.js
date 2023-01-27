@@ -93,3 +93,17 @@ function randomRange(myMin, myMax) {
 var myRandom = randomRange(3, 9);
 
 console.log(myRandom);
+
+/* perseInt function takes in a string and returns an integer. 
+function convertToInteger(str) {
+  
+    return parselnt(str);
+}
+console.log(convertToInteger("45")); */
+ 
+
+/* Use parseInt function with a Radix. Radix specifies the base of the number such as base2 and 10*/
+function convertToInteger(str) {
+    return parseInt(str, 2)
+}
+convertToInteger("100001100");
