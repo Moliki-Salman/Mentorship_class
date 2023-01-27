@@ -52,3 +52,27 @@ function objectFunction(val) {
     return result;
 };
   console.log(objectFunction("Nigeria"))
+
+  /* checking if an object has a property 
+  let myobj = {
+
+    Nigeria: "Abuja",
+    Germany: "Berlin",
+    Poland : "Warsaw",
+  };
+
+  function checkobj(properties) {
+
+    if (myobj.hasProperties(properties)) {
+        return myobj[properties];
+    } else {
+        return "not found!"
+    }
+  }
+  console.log(checkobj("Germany")) */
+
+ /* Math.random is a function that its number is always between 0 and 1. */
+  function randomFunction() {
+    return Math.random();
+  }
+console.log(randomFunction());
