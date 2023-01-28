@@ -151,14 +151,15 @@ editInPlace();
 
 console.log(s);
 
-/* Prevent Object Mutation with OBJECT.FREEZE*/
-//write a function that freezes an object
+/* Prevent Object Mutation with OBJECT.FREEZE
+ write a function that freezes an object
 function freezeObj() {
+    "use strict"
     const MATHS_CONSTANTS= {
         PI: 3.24
     }
 
-    objectFunction.freeze(MATHS_CONSTANTS);
+    object.freeze(MATHS_CONSTANTS);
 
     try {
         MATHS_CONSTANTS.PI = 99;
@@ -168,4 +169,31 @@ function freezeObj() {
     return MATHS_CONSTANTS.PI;
 }
 
-const PI = freezeObj()
+const PI = freezeObj() */
+
+/* rewrite this finction to an arrow function
+var magic = function() {
+    return new Date();
+}; */
+var margic = () => new Date();
+
+/* var myConcat = function(arr1, arr2) {
+    return arr1.concat(arr2);
+};
+
+console.log(myConcat([1, 2], [3, 4, 5]));
+*/
+
+var myConcat = (arr1, arr2) => arr1.concat(arr2);
+
+console.log(myConcat([1, 2], [3, 4, 5]));
+
+/* Arrow function takes other function as argument
+complete the square of only positive integer of the array.*/
+const realNumberArray = [4, 5.6, -9.8, 3.14, 43, 5, 8.45, -2];
+const squareList = (arr) => {
+    const squaredIntegers = arr.filter(num => Number.isInteger(num) && num > 0).map(x => x * x);
+    return squaredIntegers;
+}
+const squaredIntegers = squareList(realNumberArray);
+console.log(squaredIntegers);
