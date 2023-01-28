@@ -207,3 +207,30 @@ const increment = (function() {
 })();
 console.log(increment(4, 5));
 console.log(increment(8));
+
+/* Array Iteration: 8 methods.to iterate means you are going to array to something with each item of thr array, not necessarily every item of the array. 
+1- forEach() does something for each item in the array */
+ [1, 2, 3].forEach(function (item, index){ //here we pass in item and idex of the array into the function
+    console.log(item, index);
+ });
+//how to remove the first odd number in an array with forEach()
+let numbers = [3, 4, 8, 20];
+let odd = 3;
+
+numbers.forEach(function(number) {
+    if(number === odd) {
+        numbers.shift();
+    }
+})
+
+console.log(numbers);
+
+//-2 map, it takes item from the array does something to it and plces the new value back in to the array(a modified element). 
+
+
+
+
+
+
+/* REST OPERATOR IS REPRESENTED WITH 3DOTS (...)
+the rest operator allows tou take a variable number of argument */
