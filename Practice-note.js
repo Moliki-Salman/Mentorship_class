@@ -245,6 +245,11 @@ const newInts = ints.filter(function(element){
 });
 console.log(newInts); //[ 2, 4, 6 ]
 
-
+//-4 Reduce() the reduce() method reduces an array of values doen to just one value. this single values that is returned can be any type.
+let sampleArr = [ 2, 4, 6, 8];
+let newSampleArr = sampleArr.reduce(function(result, element) {
+    return result + element;
+}, 0);
+console.log(newSampleArr); //20
 /* REST OPERATOR IS REPRESENTED WITH 3DOTS (...)
 the rest operator allows tou take a variable number of argument */
