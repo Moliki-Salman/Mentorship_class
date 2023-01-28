@@ -281,6 +281,12 @@ let foundIndex = objects2.findIndex(function(item){
 }); 
 console.log(foundIndex); // 2 because its index 2
 
+// Immediately Invoked Function Expression (IIFE)
+(favNumber  = function (num = 3) {
+    console.log("My favorite number is " + num); //My favorite number is 3
+})();
+favNumber(5); // My favorite number is 5
+
 
 /* REST OPERATOR IS REPRESENTED WITH 3DOTS (...)
 the rest operator allows tou take a variable number of argument */
