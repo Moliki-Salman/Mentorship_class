@@ -151,4 +151,21 @@ editInPlace();
 
 console.log(s);
 
-/* Prevent Object Mutation*/
+/* Prevent Object Mutation with OBJECT.FREEZE*/
+//write a function that freezes an object
+function freezeObj() {
+    const MATHS_CONSTANTS= {
+        PI: 3.24
+    }
+
+    objectFunction.freeze(MATHS_CONSTANTS);
+
+    try {
+        MATHS_CONSTANTS.PI = 99;
+    } catch( ex ) {
+        console.log(ex);
+    }
+    return MATHS_CONSTANTS.PI;
+}
+
+const PI = freezeObj()
