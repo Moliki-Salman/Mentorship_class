@@ -238,9 +238,12 @@ let newArr = arr.map (function(element){
 });
 console.log(newArr);  // [ 9, 18, 27 ]
 
-
-
-
+//-3 filter(), the filter creates a new array and returns all the items which pass the condition specifoes in the callback
+const ints = [1, 2, 3, 4, 5, 6]
+const newInts = ints.filter(function(element){
+    return element % 2 === 0;
+});
+console.log(newInts); //[ 2, 4, 6 ]
 
 
 /* REST OPERATOR IS REPRESENTED WITH 3DOTS (...)
