@@ -128,3 +128,27 @@ function testNum(num) {
     return num > 5 ? "positive" : num < 2 ? "negative" : "zero"
 }
 console.log(testNum(1));
+/* Const practice*/
+function printManyTimes(str) {
+    "use strict"
+
+    const SENTENCE = str + "os cool!";
+
+    for (let i = 0;  i < str.length; i++ );
+        console.log(SENTENCE);
+}
+printManyTimes("coding");
+
+/* How to reassign into an Array even when the array is const.*/
+const s = [5, 7, 12];
+function editInPlace() {
+    "use strict";
+    s[0] = 3;
+    s[1] = 8;
+    s[2] = 9;
+}
+editInPlace();
+
+console.log(s);
+
+/* Prevent Object Mutation*/
