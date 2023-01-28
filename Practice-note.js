@@ -274,6 +274,13 @@ let found = objects.find(function(item){
 }); 
 console.log(found); // { id: 'b' }
 
+//-8 findIndex(), It returns the index of the element we find using the find() metthod. if no elements match the condition, the findIndex() methid returns -1. 
+let objects2 = [{ id: 'a' }, { id: 'b' }, { id: 'c'}];
+let foundIndex = objects2.findIndex(function(item){
+    return item.id === 'c';
+}); 
+console.log(foundIndex); // 2 because its index 2
+
 
 /* REST OPERATOR IS REPRESENTED WITH 3DOTS (...)
 the rest operator allows tou take a variable number of argument */
