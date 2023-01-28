@@ -267,6 +267,12 @@ const newEveryItem = everyItem.every(function(element) {
 });
 console.log(newEveryItem); // true. 
 
+//-7 find () the find() metthod returns the first matched element from the array that satisfies the condition in the function. 
+let objects = [{ id: 'a' }, { id: 'b' }, { id: 'c'}];
+let found = objects.find(function(item){
+    return item.id === 'b';
+}); 
+console.log(found); // { id: 'b' }
 
 
 /* REST OPERATOR IS REPRESENTED WITH 3DOTS (...)
