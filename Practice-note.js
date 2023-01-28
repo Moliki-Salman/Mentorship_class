@@ -212,7 +212,8 @@ console.log(increment(8));
 1- forEach() does something for each item in the array */
  [1, 2, 3].forEach(function (item, index){ //here we pass in item and idex of the array into the function
     console.log(item, index);
- });
+ }); //1 0, 2 1, 3 2
+
 //how to remove the first odd number in an array with forEach()
 let numbers = [3, 4, 8, 20];
 let odd = 3;
@@ -223,9 +224,19 @@ numbers.forEach(function(number) {
     }
 })
 
-console.log(numbers);
+console.log(numbers); //[ 4, 8, 20 ]
 
 //-2 map, it takes item from the array does something to it and plces the new value back in to the array(a modified element). 
+const three = [1, 3, 4];
+const newThree = three.map(function(item) {
+    return item * 2;
+});
+console.log(newThree); //[ 2, 6, 8 ]
+let arr = [3, 6, 9];
+let newArr = arr.map (function(element){
+    return element * 3;
+});
+console.log(newArr);  // [ 9, 18, 27 ]
 
 
 
