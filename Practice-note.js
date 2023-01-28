@@ -256,11 +256,16 @@ console.log(newSampleArr); //20
 //-5 some() The some() array method returns boolean value(true/false) based on at least one element in the array passing the condition in the function. 
 const examArr = [2, 4, 5, -3, -1, 8, 0];
 const newExamArr = examArr.some(function(element) {
-    return element <= 0;
+    return element < 0;
 });
 console.log(newExamArr); // true
 
-
+//-6 every() the every() method detects if every elements of the array satisfies the condition passed in the function
+const everyItem = [2, 3, 4, 5];
+const newEveryItem = everyItem.every(function(element) {
+    return element > 0;
+});
+console.log(newEveryItem); // true. 
 
 
 
