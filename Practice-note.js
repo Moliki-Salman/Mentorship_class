@@ -197,3 +197,13 @@ const squareList = (arr) => {
 }
 const squaredIntegers = squareList(realNumberArray);
 console.log(squaredIntegers);
+
+/* Arrow function with Default parameters or arguement*/
+
+const increment = (function() {
+    return function increment(number, value = 1) {
+        return number + value;
+    };
+})();
+console.log(increment(4, 5));
+console.log(increment(8));
