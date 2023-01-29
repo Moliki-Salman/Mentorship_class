@@ -289,4 +289,37 @@ favNumber(5); // My favorite number is 5
 
 
 /* REST OPERATOR IS REPRESENTED WITH 3DOTS (...)
-the rest operator allows tou take a variable number of argument */
+the rest operator allows you to take a variable number of argument */
+const sum = (function() {
+    return function sum(...args) {
+        return args.reduce((a, b) => a + b, 0);
+    }
+})();
+console.log(sum(4, 3, 6, 1));
+
+//Import and Export
+import {nameOfImportedFunction} from "./file_name"; // ./ is used if file is in the current directory
+const cap = nameOfImportedFunction("hello");
+
+console.log(cap);
+
+//use Export to reuse a code block (this is a named export)
+const nameOfobj = (string) => {
+    return string.charAT(0).toUpperCase() + string.slice(1);
+}
+
+export { nameOfobj }; 
+
+export const foo = "bar";
+export const bar = "foo"; // you can export variables to
+
+//import everything from a file using (import * as)
+import * as nameOfObjectCreated from "file-name";
+
+//Create an Export Fallback with export default (fallback export is done when you want to onlt export one thing from a file)
+export default function subtract(x,y) {return x - y};
+
+//Import a Default Export
+import substract from "file=name"; //add curly brases around {substract} if what you are exporting is not a default export. 
+
+subtract(3,1);
